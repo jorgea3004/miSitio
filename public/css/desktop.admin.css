@@ -1,0 +1,278 @@
+        html body {
+        	height: auto;
+        	margin: 0;
+        	padding: 0;
+        	width: 100%;
+        }
+        html body * {
+        	display: inline-block;
+        	height: auto;
+        	margin: 0;
+        	padding: 0;
+        	width: 100%;
+        }
+        html body header,html body footer {
+            color: #666;
+            font-family: Comic Sans, Comic Sans MS, cursive;
+            font-size: 24px;
+            height: auto;
+            margin: 2px 0 2px 1%;
+            text-align: center;
+            width: 98%;
+        }
+        html body header img {
+            cursor: pointer;
+            float: right;
+            height: 25px;
+            margin: 2px;
+            position: relative;
+            width: 25px;
+        }
+        section {
+        	height: auto;
+        	margin: 0;
+        	padding: 0;
+        	width: 100%;
+        }
+        article {
+        	height: auto;
+        	width: 100%;
+        }
+        ul {
+        	height: auto;
+        	width: 100%;
+        }
+        ul li {
+        	border: solid 1px transparent; 
+        	height: auto;
+        	list-style: none;
+        	margin: 1px 0 1px 1%;
+        	padding: 2px 0;
+        	width: 98%;
+        }
+        ul li:first-child {
+        	text-align: center;
+        }
+        ul li.errores {
+        	border: solid 1px red; 
+        }
+        ul li.btnsubmit {
+        	background: #aaa;
+        	border: solid 2px green;
+         	border-radius: 10px;
+	       	height: 45px;
+	       	margin: 25px 0 0 1%;
+	       	width: 96%;
+        }
+        ul li.btnsubmit:active {
+        	background: #fff;
+        }
+        ul li.btncancel {
+            background: #aaa;
+            border: solid 2px red;
+            border-radius: 10px;
+            height: 45px;
+            margin: 25px 0 0 1%;
+            width: 96%;
+        }
+        ul li.btncancel:active {
+            background: #fff;
+        }
+        ul li b {
+        	display: inline;
+        	height: auto;
+        	width: auto;
+        }
+        ul li label {
+        	color: #fff;
+            cursor: pointer;
+        	display: inline;
+        	float: left;
+        	font-family: 'Comic Sans MS', cursive;
+        	font-size: 24px;
+        	height: auto;
+        	margin: 0;
+        	padding: 6px 0;
+        	position: relative;
+        	text-align: center;
+        	width: 100%;
+        }
+        ul li.btnsubmit label:active {
+        	color: #000;
+        }
+        ul li input,ul li select {
+        	display: inline;
+        	height: 30px;
+        	margin: 0 1%;
+        	padding: 0;
+        	width: 94%;
+        }
+        form ul li,form ul li:first-child {
+        	font-size: 20px;
+        	font-weight: bold;
+        	margin: 10px 0 10px 0;
+        	text-align: left;
+        }
+        ul li select option {
+        	display: block;
+        	float: left;
+        	height: 20px;
+        	position: relative;
+        	margin: 0;
+        	padding: 0;
+        	width: 100%;
+        }
+
+article#deskadm {}
+article#deskadm div {
+    background: #eee;
+    border: solid 0px #000;
+    border-radius: 5px;
+    display: inline;
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    height: auto;
+    margin: 1% 0 0 1%;
+    min-height: 1px;
+    padding: 0 0;
+    position: relative;
+    width: 98%;
+}
+article#deskadm div img {
+    border: 0;
+    display: inline;
+    float: left;
+    height: 50px;
+    margin: 5px ;
+    padding: 0 0;
+    position: relative;
+    width: 50px;
+}
+article#deskadm div ul {
+    display: inline;
+    float: left;
+    height: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0 0;
+    position: relative;
+    width: auto;
+}
+article#deskadm div ul li {
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0 0;
+    text-align: left;
+    width: 100%;
+}
+article#deskadm div label {
+    bottom: 0;
+    color: #000;
+    cursor: pointer;
+    display: none;
+    float: right;
+    height: auto;
+    margin: 5px ;
+    padding: 0 0;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    width: auto;
+}
+article#deskadm div label img {
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin: 5px ;
+    padding: 0 0;
+    position: relative;
+    text-decoration: none;
+    width: 30px;
+}
+article#deskadm div.editin {
+    border: solid 1px #000;
+}
+article#deskadm div label.editar {
+    display: block;
+}
+article#deskadm div label.opciones {
+    display: none;
+}
+article#deskadm div.editin ul li, article#deskadm div.editin img.tlogo {
+    cursor: pointer;
+    opacity: 1;
+}
+article#deskadm div.editin ul li:hover, article#deskadm div.editin img.tlogo:hover {
+    opacity: 0.7;
+}
+article#deskadm div ul li:last-child {
+    display: none;
+}
+article#deskadm div.editin ul li:last-child {
+    display: block;
+}
+section article form#adesktope ul li img {
+    height: auto;
+    max-height: 150px;
+    max-width: 150px;
+    width: auto;
+}
+#popup_bg {
+    background:url(../img/transparent-bg.png) center top repeat;
+    display:none;
+    left:0px;
+    position:absolute;
+    top:0px;
+    z-index:99;
+}
+#popup_bg #popup_main {
+    background:#FFFFFF;
+    border:1px solid #454F47;
+    display:inline;
+    float:left;
+    height:580px;
+    left:50%;
+    margin-left:-35%;
+    margin-top:-600px;
+    position:absolute;
+    width:70%;
+}
+#popup_bg #popup_body{
+    background:#FFFFFF;
+    display:inline;
+    float:left;
+    height:100%;
+    margin-left:0px;
+    margin-top:0px;
+    position:relative;
+    width:100%;
+}
+div#popup_bg div#popup_main div#popup_body iframe {
+    overflow-y:auto;
+    height: 100%;
+    width: 100%;
+}
+
+#popup_bg #popup_close{
+    background:url("../img/thumb_Icon_x_sm.png") center top no-repeat;
+    cursor:pointer;
+    display:inline;
+    float:left;
+    height:25px;
+    margin-left:-10px;
+    margin-top:-10px;
+    position:absolute;
+    width:25px;
+}
+
+@media screen and (max-width:700px){
+    #popup_bg #popup_main {
+        left: 0;
+        margin-left: 0;
+        width: 98%;
+    }
+}

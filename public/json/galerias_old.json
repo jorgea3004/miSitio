@@ -1,0 +1,29 @@
+var galerias = [
+{
+id: "1",
+foto: "res_DSCN3757.JPG",
+link: "res_DSCN3757.JPG",
+gal: "46",
+title: "TNT Noviembre 2016"
+},
+{
+id: "2",
+foto: "res_DSCN3692.JPG",
+link: "res_DSCN3692.JPG",
+gal: "45",
+title: "Halloween 2016"
+},
+{
+id: "3",
+foto: "res_DSCN3313.JPG",
+link: "res_DSCN3313.JPG",
+gal: "44",
+title: "La Mole Septiembre 2016"
+},
+{
+id: "4",
+foto: "res_DSCN2707.JPG",
+link: "res_DSCN2707.JPG",
+gal: "43",
+title: "TNT Agosto 2016"
+}  ]

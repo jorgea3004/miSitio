@@ -1,0 +1,297 @@
+html,body {height:100%}
+#wrapper {
+height:100%;
+min-height:100%;/*for mozilla*/
+}
+html {
+	background:#FFF0FF;
+	min-height:100%;
+	position:relative
+}
+body {
+	color:#000000;
+	display:inline;
+	float:left;
+	height:auto;
+	min-height: 100%;
+	margin:0;
+	padding:0;
+	position:relative;
+	text-align:left;
+	width:100%;
+}
+section {
+	display:inline;
+	float:left;
+	height:auto;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section#wrapper {
+	display:inline;
+	float:left;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:100%;
+}
+section#header {
+	background:#bbb;
+	box-shadow: 0px 0px 10px #000000;
+	display:inline;
+	float:right;
+	height:auto;
+	margin:0;
+	min-height:20px;
+	opacity:0.7;
+	padding:0 10px;
+	position:absolute;
+	right:0;
+	width:auto;
+}
+section#menulat {
+	background:url(../imgs/bg_popup.png) center top repeat;
+	height:100%;
+	min-width:54px;
+	width:5%;
+}
+section#menulat ul {
+	display:inline;
+	height:auto;
+	margin:5px 0;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section#menulat ul li {
+	cursor:pointer;
+	display:block;
+	height:54px;
+	list-style:none;
+	margin:5px 3px;
+	padding:0;
+	position:relative;
+	width:54px;
+}
+section#menulat ul li {
+	height:54px;
+	width:54px;
+}
+div#fecha{
+	display:inline;
+	float:right;
+	height:auto;
+	padding:5px;
+	width:auto;
+}
+section.sect_content {
+	background:url(../imgs/bg_popup.png) center top repeat;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	display:none;
+	float:left;
+	height:auto;
+	margin:50px 0 0 5px;
+	min-width:1px;
+	min-height:100px;
+	position:relative;
+	width:1px;
+}
+section.sect_content article {
+	display:inline;
+	float:left;
+	height:auto;
+	margin:5px;
+	padding:0;
+	position:relative;
+	width:100%;
+}
+section.sect_content article.headr {
+	color:#ffffff;
+	font-size:25px;
+}
+section.sect_content article.content {
+}
+section.sect_content article.content ul {
+	display:inline;
+	float:left;
+	height:auto;
+	margin:5px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+section.sect_content article.content ul li {
+	cursor:pointer;
+	display:inline;
+	float:left;
+	height:auto;
+	list-style:none;
+	margin:5px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+
+div.bg_popup {
+	background:url(../imgs/bg_popup.png) center top repeat;
+	display:block;
+	float:left;
+	height:100%;
+	left:0;
+	margin:0px;
+	padding:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:9;
+}
+div.bg_popup div.pp_main {
+	background:#000000;
+	border:solid 1px #ddd;
+	display:none;
+	float:left;
+	height:90%;
+	left:0;
+	margin:3% 0 0 3%;
+	padding:0;
+	position:absolute;
+	top:0;
+	width:94%;
+}
+div.bg_popup div.pp_main iframe#popupifrm {
+	background:#000000;
+	display:inline;
+	float:left;
+	height:100%;
+	left:0;
+	margin:0;
+	overflow:auto;
+	padding:0;
+	position:relative;
+	top:0;
+	width:100%;
+}
+div.bg_popup div.pp_main div.pp_cls {
+	background:url(../imgs/thumb_Icon_x_sm.png) center top no-repeat;
+	cursor:pointer;
+	display:inline;
+	float:right;
+	height:25px;
+	right:0;
+	margin:-12px;
+	padding:0;
+	position:absolute;
+	top:0;
+	width:25px;
+	z-index:10;
+}
+body  {
+	background:#111111;
+	color:#ffffff;
+	height:auto;
+	margin:0px;
+	padding:0;
+	width:100%;
+}
+body ul.ulcomm {
+	display:inline;
+	float:left;
+	height:auto;
+	margin:0;
+	padding:1%;
+	position:relative;
+	width:98%;
+}
+body ul.ulcomm  li {
+	border-bottom: dotted 1px #9AE4E8;
+	display:inline;
+	float:left;
+	height:auto;
+	list-style:none;
+	margin:5px;
+	padding:0;
+	position:relative;
+	width:96%;
+}
+body div.dcommen {
+	display:inline;
+	float:left;
+	font-size:14px;
+	height:auto;
+	margin:5px 2%;
+	padding:0;
+	position:relative;
+	width:96%;
+}
+body div.ddetails {
+	color:#9AE4E8;
+	display:inline;
+	float:left;
+	font-size:11px;
+	height:auto;
+	margin:0px 0 5px 1%;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+body ul.externus {
+	display:inline;
+	float:left;
+	height:auto;
+	margin:5px 2%;
+	padding:0;
+	position:relative;
+	width:96%;
+}
+body ul.externus  li {
+	border-bottom: solid 1px #9AE4E8;
+	display:inline;
+	float:left;
+	height:auto;
+	list-style:none;
+	margin:0px 2%;
+	padding:0;
+	position:relative;
+	width:96%;
+}
+body ul.internus {
+	display:inline;
+	float:left;
+	height:auto;
+	margin:0px 2%;
+	padding:0;
+	position:relative;
+	width:96%;
+}
+body ul.internus  li {
+	border-bottom: solid 0px #9AE4E8;
+	display:inline;
+	float:left;
+	height:auto;
+	list-style:none;
+	margin:5px;
+	padding:0;
+	position:relative;
+	width:auto;
+}
+.bhoy {
+	background:#999999;
+}
+
+
+@media screen and (max-width: 500px){
+	section#menulat ul li {
+		margin:5px auto;
+		width:auto;
+	}
+	section#menulat ul li img{
+	}
+	section.sect_content article.content ul li {
+		margin:2px;
+	}
+
+}

@@ -1,0 +1,353 @@
+html {
+  background:#FFF0FF;
+  margin:0;
+  min-height:100%;
+  min-width:100%;
+  padding:0;
+}
+body {
+  background: url(../img/white-texture.jpg) center top repeat;
+  color:#000000;
+  display: inline-block;
+  float: left;
+  margin:0;
+  padding:0;
+  position: absolute;
+  text-align:left;
+  min-height:100%;
+  min-width:100%;
+}
+header,footer {
+  background:url(../img/topbg.png) left top repeat-y;
+  display:none;
+  height:30px;
+  margin:0;
+  min-height:20px;
+  padding:0;
+  position:relative;
+  width:100%;
+}
+header {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+section {
+  display:inline;
+  float:left;
+  margin:0px;
+  min-height:100%;
+  min-width:100%;
+  padding: 0px;
+  position:relative;
+}
+section article {
+  display:none;
+  float:left;
+  height:auto;
+  margin:40px 0 0 0px;
+  padding: 0px;
+  position:relative;
+  width:100%;
+  z-index: 0;
+}
+section article fieldset {
+  margin:5px 1px;
+  padding: 2px 1px;
+}
+section article ul {
+  color:#000;
+  display:inline;
+  float:left;
+  height:auto;
+  margin:0px;
+  padding:0;
+  position:relative;
+  width:auto;
+}
+section article ul li {
+  cursor: pointer;
+  display:inline;
+  float:left;
+  height:150px;
+  list-style:none;
+  margin:2px;
+  opacity: 1;
+  padding:0px;
+  position:relative;
+  width:150px;
+}
+section article ul li.opnblank p {
+  background: none repeat scroll 0 0 #008000;
+  border: 5px solid #AAAAAA;
+  border-radius: 30px 30px 30px 30px;
+  color: #FFFFFF;
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  height: 30px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: -40px;
+  width: 30px;
+}
+
+section article ul li img {
+  height:100%;
+  width:100%;
+}
+section article ul li label {
+  background:url(../img/bg_popup.png) center center repeat;
+  bottom: 0;
+  color: #fff;
+  display:block;
+  float:left;
+  height:auto;
+  list-style:none;
+  margin:0px;
+  padding:0px;
+  position:absolute;
+  width:100%;
+}
+section article iframe {
+  display:inline;
+  float:left;
+  height:auto;
+  margin:0px;
+  padding:0;
+  position:relative;
+  width:auto;
+}
+
+
+nav {
+  display:inline;
+  float: left;
+  height:auto;
+  margin:0;
+  padding:0;
+  position:relative;
+  width:95%;
+}
+nav ul {
+  display:inline;
+  height:auto;
+  list-style:none;
+  margin:0px;
+  padding:0;
+  width:auto;
+}
+nav ul li {
+  cursor: pointer;
+  display:inline;
+  float:left;
+  height:auto;
+  list-style:none;
+  margin:0 5px;
+  padding:0;
+  position:relative;
+  width:auto;
+}
+nav ul li img {
+  height:auto;
+  width:30px;
+}
+nav ul li:first-child {
+  border-right: solid 1px #000;
+  margin-right: 10px;
+}
+nav ul li:first-child img {
+  margin-right: 10px;
+}
+header li.netw
+nav ul li ul {
+  color:#fff;
+  display:block;
+  float:left;
+  height:auto;
+  left:0;
+  margin:0px 0 0 0px;
+  padding:0;
+  position:absolute;
+  top:29px;
+  width:auto;
+}
+nav ul li ul li {
+  background: transparent;
+  color:#000;
+  display:block;
+  float:left;
+  height:auto;
+  list-style:none;
+  margin:1px 2px;
+  min-width:140px;
+  opacity: 1;
+  padding:0px;
+  position:relative;
+  width:auto;
+}
+nav ul li ul li:hover {
+  background: url(../img/bglist.png) bottom left repeat-x;
+  opacity: 0.7;
+}
+nav ul li ul li:first-child {
+  border-right: solid 0px #000;
+  margin-right: 2px;
+}
+nav ul li.netw {
+  background: url(../img/wifi_wireless_network.png) center top no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: 30px;
+}
+nav ul li.netw ul#netwin2 {
+  top: 30px;
+  display: none;
+  float: left;
+  position: relative;
+  width: 150px;
+  background: transparent;
+}
+nav ul li.netw.sobre ul#netwin2 {
+  display: block;
+}
+nav ul li.netw.sobre {
+  height: 100%;
+}
+div#opnwndw {
+  background: #ddd;
+  border: solid 1px #ccc;
+  color:#000;
+  display:none;
+  float:left;
+  height:90%;
+  margin:2%;
+  padding:0px;
+  position:absolute;
+  top: 10px;
+  width:95%;
+  z-index: 999;
+}
+div#opnwndw iframe {
+  border:0;
+  display:inline;
+  float:left;
+  height:100%;
+  margin:0;
+  overflow: auto;
+  padding:0;
+  position:relative;
+  top: 0px;
+  width:100%;
+  z-index: 0;
+}
+div#opnwndw div#clswn {
+  background: transparent url(../img/thumb_Icon_x_sm.png) center top no-repeat;
+  cursor: pointer;
+  height: 25px;
+  position:absolute;
+  right: -12px;
+  top: -12px;
+  width:25px;
+  z-index: 10;
+}
+
+footer {
+  bottom: 0;
+  display: none;
+  position: absolute;
+}
+
+div#topindex {
+    display: inline;
+    float: left;
+    height: auto;
+    left: 50%;
+    margin: 0 0 0 -475px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 950px;
+}
+div#topindex h2 {
+  font-size: 20px;
+}
+div#topindex ul{
+  list-style: none;
+  text-align: left;
+    display: inline;
+    float: left;
+    position: relative;
+    padding: 0;
+}
+div#topindex ul li {
+    border: 1px solid #000;
+    display: inline;
+    float: left;
+    height: auto;
+    list-style: outside none none;
+    margin: 3px 0;
+    padding: 3px 0;
+    position: relative;
+    width: 100%;
+}
+div#topindex ul li a,
+div#topindex ul li p {
+  float: left;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+div#topindex ul li p {
+  float: left;
+  left: 0;
+  width: 98%;
+  height: auto;
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 0;
+  padding: 3px;
+}
+div#topindex ul li img {
+  float: right;
+  max-width: 100px;
+  max-height: 100px;
+}
+div#topindex ul li.top1 img {
+  max-width: 300px;
+  max-height: 300px;
+}
+div#topindex ul li.top2 img {
+  max-width: 200px;
+  max-height: 200px;
+}
+div#topindex ul li.top3 img {
+  max-width: 150px;
+  max-height: 150px;
+}
+@media screen and (max-width:949px){
+  div#topindex {
+      left: 0;
+      margin: 0 0 0 1%;
+      width: 98%;
+  }
+}
+@media screen and (max-width:450px){
+  section article ul li { height:100px; width:100px;}
+}
+@media screen and (max-width:390px){
+  div#topindex ul li.top1 img {
+    max-width: 98%;
+    max-height: auto;
+  }
+}

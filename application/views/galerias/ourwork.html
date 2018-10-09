@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href=">public/img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico?v=1.1"> 
+    <title>iYorch </title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/styl.css" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="main_part_inner">
+        <div id="main_part_inner_in">
+            <h1>Mis Galerias</h1>
+        </div>
+    </div>
+    <div id="content_inner"></div>
+    <hr class="cleanit">
+    <footer id="footer"></footer>
+    <script type="text/babel" src="./js/mainMenu.js"></script>
+    <script type="text/babel" src="./js/ourwork.js"></script>
+    <script type="text/babel" src="./js/mainFooter.js"></script>
+    <script type="text/babel">
+    var galeriasArray = [{
+id: "1",
+foto: "res_DSCN3757.JPG",
+link: "res_DSCN3757.JPG",
+gal: "46",
+title: "TNT Noviembre 2016"
+},
+{
+id: "2",
+foto: "res_DSCN3692.JPG",
+link: "res_DSCN3692.JPG",
+gal: "45",
+title: "Halloween 2016"
+},
+{
+id: "3",
+foto: "res_DSCN3313.JPG",
+link: "res_DSCN3313.JPG",
+gal: "44",
+title: "La Mole Septiembre 2016"
+},
+{
+id: "4",
+foto: "res_DSCN2707.JPG",
+link: "res_DSCN2707.JPG",
+gal: "43",
+title: "TNT Agosto 2016"
+}  ];
+class CarrouselItem extends React.Component {
+  constructor(props) {
+    super(props)
+    this.handleClick = this._handleClick.bind(this, props.gal);
+  }
+
+  propTypes: {
+    id: React.PropTypes.string.isRequired,
+    gal: React.PropTypes.string.isRequired,
+    foto: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.handleClick = this._handleClick.bind(this, nextProps.gal);
+  }
+  // esta función nos sirve de base para crear nuestro `this.handleClick`
+  _handleClick(gal, event) {
+    //alert(`hola ${gal} /  ${foto}`);
+    let url = "foto.html";
+    window.location = url;
+  }
+
+  render() {
+    return (
+        React.createElement("div", {className:"fourths_portfolio", onClick:this.handleClick},
+          React.createElement("h4", {}, this.props.title,
+            React.createElement("br", {}),
+            React.createElement("span", {},"see detail")
+          ),
+          React.createElement("a", {href:"#"},
+            React.createElement("img", {src:"gals/"+this.props.gal+"/",alt:this.props.title})
+          )
+        )
+    )
+  }
+}
+
+var contactItemElements = galeriasArray
+  .filter(function(contact) { return contact.foto })
+  .map(function(contact) { return React.createElement(CarrouselItem, contact) })
+
+var rootElement = React.createElement('div', {}, contactItemElements);
+
+ReactDOM.render(rootElement, document.getElementById('galeriaBd'))
+
+    </script>
+</body>
+</html>
