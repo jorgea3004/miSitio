@@ -13,8 +13,6 @@ class Home extends CI_Controller {
 		if (!file_exists('public/json/galerias.json')) {
 			$this->generaJsonGalerias();
 		}
-
-
 		$this->load->view('headers/header',$data);
 		$this->load->view('home/index');
 		$this->load->view('headers/footer');
@@ -34,7 +32,7 @@ class Home extends CI_Controller {
 			$this->load->model('galeriasm');
 			$gals = $this->galeriasm->recentGals(4);
 			if($gals->num_rows()>0): 
-				$valor= 'var carrusel = [';
+		    	$valores= array();
 				foreach($gals->result() as $row): 
 					$idgal = $row->id;
 					$fots = $this->galeriasm->presentacionHome_size_num($idgal,1,$num);
@@ -45,23 +43,21 @@ class Home extends CI_Controller {
 							} else {
 								$srcPhoto = "".$rowf->fdescription;
 							}
-							$valor .= '{'
-										.'id: "'.$int.'",'
-										.'foto: "'.$srcPhoto.'",'
-										.'link: "'.$srcPhoto.'",'
-										.'gal: "'.$rowf->id_galeria.'",'
-										.'title: "'.$rowf->name_galeria.'"'
-										.'},';
+							$valores[]= array(
+								'id' => $int,
+								'foto' => $srcPhoto,
+								'link' => $srcPhoto,
+								'gal' => $rowf->id_galeria,
+								'title' => $rowf->name_galeria
+								);
 							$int++;
 						endforeach;
 					endif;
 				endforeach;
-				$cta = strlen($valor)-1;
-				$valor = substr($valor, 0,$cta);
-				$valor.= ']';
 			endif;
+			$valor = array('items' => $valores);
 			$fileHandle = @fopen($dir . 'carrusel.json', 'w'); 
-			fwrite($fileHandle, $valor); 
+			fwrite($fileHandle, json_encode($valor)); 
 			fclose($fileHandle); 
 		}
 	}
@@ -80,7 +76,7 @@ class Home extends CI_Controller {
 			$this->load->model('galeriasm');
 			$gals = $this->galeriasm->recentGals(4);
 			if($gals->num_rows()>0): 
-				$valor= 'var galerias = [';
+				$valores= array();
 				foreach($gals->result() as $row): 
 					$idgal = $row->id;
 					$queryft = $this->galeriasm->gfotos($idgal,0,1);
@@ -88,21 +84,20 @@ class Home extends CI_Controller {
 					foreach($queryft->result() as $rowf): 
 						$foto = $rowf->description;
 					endforeach;
-					$valor .= '{'
-								.'id: "'.$int.'",'
-								.'foto: "'.$foto.'",'
-								.'link: "'.$foto.'",'
-								.'gal: "'.$idgal.'",'
-								.'title: "'.$row->description.'"'
-								.'},';
+					$valores[]= array(
+						'id' => $int,
+						'foto' => $foto,
+						'link' => $foto,
+						'gal' => $idgal,
+						'title' => $row->description
+						);
 					$int++;
 				endforeach;
-				$cta = strlen($valor)-1;
-				$valor = substr($valor, 0,$cta);
-				$valor.= ']';
 			endif;
+			$valor = array('items' => $valores);
+			echo json_encode($valor);
 			$fileHandle = @fopen($dir . 'galerias.json', 'w'); 
-			fwrite($fileHandle, $valor); 
+			fwrite($fileHandle, json_encode($valor)); 
 			fclose($fileHandle); 
 		}
 	}

@@ -1,3 +1,4 @@
+<?php /*
     <div id="main_part_inner">
         <div id="main_part_inner_in">
             <h1><?=$nombre?></h1>
@@ -88,3 +89,7 @@ var rootElement = React.createElement('div', {}, contactItemElements);
 ReactDOM.render(rootElement, document.getElementById('galeriaBd'));
 ReactDOM.render(<Paginador />, document.getElementById('pagination'));
 </script>
+*/
+$arrayName = array('items' => $jsonGaleria, 'pagination' => $paginador, 'nombre' => $nombre);
+echo json_encode($arrayName, true);
+?>

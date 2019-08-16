@@ -1,5 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, X-Requested-With");
 
 class Contacto extends CI_Controller {
 
@@ -48,13 +51,14 @@ class Contacto extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('comentariosm');
 
+		$rest_json = file_get_contents("php://input");
+		$_POST = json_decode($rest_json, true);
 		$nombre = $_POST['nombre'];
 		$email = $_POST['email'];
 		$url = $_POST['url'];
 		$coment = $_POST['message'];
 
-		//echo "Se reciben datos de: " . $nombre . "<br>Email: " . $email . "<br>URL: " . $url . "<br>Comment: " . $coment . ".<br>";
-		//exit();
+		$respuesta=array();
 		$fecha = date("Y-m-d H:i:s");
 		if (isset($url) && strlen($url)>0 ) {
 			$coment = $url . " _n_ " . $coment;
@@ -68,9 +72,13 @@ class Contacto extends CI_Controller {
 								"status" => 0
 								);
 			$this->comentariosm->insertEntry($datos);
-	        set_cookie("frmCntcto", "frmCntcto", 3600 );
+	        //set_cookie("frmCntcto", "frmCntcto", 3600 );
+	        $respuesta['message']='Gracias por tu mensaje.';
+			$respuesta['frmlog']=true;
+		}else{
+	        $respuesta['message']='Error: Datos incompletos, favor de poner Nombre, Correo y un Mensaje.';
+			$respuesta['frmlog']=false;
 		}
-
-		redirect(base_url().'contacto/', 'location', 301);
+		echo json_encode($respuesta);
 	}
 }

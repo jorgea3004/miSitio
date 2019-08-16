@@ -9,7 +9,7 @@ class Login extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
     
-    fetch('http://localhost/misitio/admin/valida/', {
+    fetch('//yorch3004.xyz/admin/valida/', {
       method: 'POST',
       body: data,
     }).then(results => {
@@ -27,7 +27,7 @@ class Login extends React.Component {
     return (
       <section id="login">
       <form onSubmit={this.handleSubmit}>
-        <img src="http://localhost/misitio/public/img/default-user-image.png"/>
+        <img src="//yorch3004.xyz/public/img/default-user-image.png"/>
         <input id="usuario" name="user" type="text" placeholder='Usuario...'/>
         <input id="contrasena" name="pass" type="password" placeholder='Password...' />
         <div className="g-recaptcha" data-sitekey="6LeRtjgUAAAAAIZnQrtuSLGySfRlavoTomSH1WYp"></div>
@@ -90,7 +90,7 @@ class FormNew extends React.Component {
 
     console.log("item1: " + this.props.contact.desc);
     document.getElementById('formulario').style.display='block';
-    fetch('http://localhost/misitio/Desktopadm/secciones/', {
+    fetch('//yorch3004.xyz/Desktopadm/secciones/', {
       method: 'GET'
     }).then(function(response) {
       if (response.status >= 400) {
@@ -123,7 +123,7 @@ class FormNew extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
     var self = this;
-    fetch('http://localhost/misitio/Desktopadm/elementNew/', {
+    fetch('//yorch3004.xyz/Desktopadm/elementNew/', {
       method: 'POST',
       body: data
     }).then(results => {
@@ -283,7 +283,7 @@ class ListView extends React.Component {
   getItems(){
     var self=this;
     var pages = this.state.page;
-    fetch('http://localhost/misitio/admin/getMenuJson/'+pages)
+    fetch('//yorch3004.xyz/admin/getMenuJson/'+pages)
     .then(function(response) {
       if (response.status >= 400) {
         throw new Error("Bad response from server");
@@ -326,7 +326,7 @@ class ListView extends React.Component {
     const indice = target.parentElement.parentElement.parentElement.id;
     const namef = target.id;
     if (namef.length>0) {
-      var url = 'http://localhost/misitio/desktopadm/deleteElement/'+namef;
+      var url = '//yorch3004.xyz/desktopadm/deleteElement/'+namef;
       fetch(url).then(function(response) {
         if (response.status >= 400) {
           throw new Error("Bad response from server");
@@ -399,14 +399,14 @@ class ListView extends React.Component {
             this.state.contacts.map(function(contact,index) {
               return (
                 React.createElement('li', {className: 'ContactItem',key:index,id:index,ref:index},
-                  React.createElement('img', {className: 'ContactItem-image',src:'http://localhost/misitio/public/img/iconos_metro/'+contact.icono}),
+                  React.createElement('img', {className: 'ContactItem-image',src:'//yorch3004.xyz/public/img/iconos_metro/'+contact.icono}),
                   React.createElement('div', {className: 'ContactItem-description'},
                     React.createElement('h2', {className: 'ContactItem-name'}, contact.desc),
                     React.createElement('label', {className: 'ContactItem-clase'}, contact.clase),
                     React.createElement('label', {className: 'ContactItem-clase'}, contact.link),
                     React.createElement('div', {className: 'ContactItem-clase'}, 
-                      React.createElement('img', {className: 'ContactItem-edit', src:'http://localhost/misitio/public/img/notes.png',id:contact.ide,onClick:self.handleEdition}),
-                      React.createElement('img', {className: 'ContactItem-delete', src:'http://localhost/misitio/public/img/trash.png',id:contact.ide,onClick:self.handleDelete })
+                      React.createElement('img', {className: 'ContactItem-edit', src:'//yorch3004.xyz/public/img/notes.png',id:contact.ide,onClick:self.handleEdition}),
+                      React.createElement('img', {className: 'ContactItem-delete', src:'//yorch3004.xyz/public/img/trash.png',id:contact.ide,onClick:self.handleDelete })
                     )
                   )
                 )
