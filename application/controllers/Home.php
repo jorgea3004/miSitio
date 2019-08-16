@@ -95,7 +95,6 @@ class Home extends CI_Controller {
 				endforeach;
 			endif;
 			$valor = array('items' => $valores);
-			echo json_encode($valor);
 			$fileHandle = @fopen($dir . 'galerias.json', 'w'); 
 			fwrite($fileHandle, json_encode($valor)); 
 			fclose($fileHandle); 
