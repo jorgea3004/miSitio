@@ -312,7 +312,7 @@ class Galeria extends React.Component {
   }
   componentDidMount() {
     let self = this;
-      axios.get("//yorch3004.xyz/galerias/").then(response => response.data)
+      axios.get("//localhost/otros/miSitio/galerias/").then(response => response.data)
         .then(function(data) {
           self.setState({galerias: data});
         })
@@ -386,7 +386,7 @@ class GaleryItem extends React.Component {
   }
   componentDidMount() {
     let self = this;
-    axios.get("//yorch3004.xyz/galerias/detalle/"+this.props.gal).then(response => response.data)
+    axios.get("//localhost/otros/miSitio/galerias/detalle/"+this.props.gal).then(response => response.data)
       .then(function(data) {
         self.setState({elementos: data.items,paginador:data.pagination,idGal:self.props.gal,nombre: data.nombre});
         ReactDOM.render(
@@ -631,7 +631,7 @@ class Contacto extends React.Component {
         };
     axios({
         method: 'post',
-        url: "http://yorch3004.xyz/contacto/validate/",
+        url: "http://localhost/otros/miSitio/contacto/validate/",
         headers: { 'content-type': 'application/json' },
         data: datas
       })
